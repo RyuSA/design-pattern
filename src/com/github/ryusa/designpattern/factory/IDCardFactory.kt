@@ -5,9 +5,13 @@ import kotlin.RuntimeException
 /**
  * @author ryusa
  */
-class IDCardFactory : AbstractCardFactory() {
+object IDCardFactory : AbstractCardFactory() {
 
     private var owners : ArrayList<String> = arrayListOf()
+
+    init {
+        println("created!!")
+    }
 
     /**
      * カードを生成する
